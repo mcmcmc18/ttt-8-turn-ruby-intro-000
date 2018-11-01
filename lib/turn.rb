@@ -9,10 +9,6 @@ end
 
 # code your input_to_index and move method here!
 
-  def turn(board)
-  counter = 0
-  while counter < 9
-  puts "Please enter 1-9:"
   
 def move(board, index, character = "X")
   board[index] = character
