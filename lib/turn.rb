@@ -13,11 +13,6 @@ def input_to_index(input)
   return new_input
 end
   
-def move(board, index, character = "X")
-  board[index] = character
-  return board
-end
-  
   def valid_move?(board, index)
   def position_taken?(board, index)
     if board[index] == " " || board[index] == "" || board[index] == nil
@@ -35,12 +30,16 @@ end
       return false
     end
 
-
   if (position_taken?(board, index)) == false && (on_board?(index) == true)
     return true
   else
     return false
   end
+end
+
+def move(board, index, character = "X")
+  board[index] = character
+  return board
 end
 
 def turn (board)
