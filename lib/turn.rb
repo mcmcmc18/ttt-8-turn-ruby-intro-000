@@ -5,6 +5,7 @@ def display_board(board)
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
 
 # code your input_to_index and move method here!
 
@@ -18,11 +19,6 @@ def move(board, index, character = "X")
   return board
 end
   
-def input_to_index(input) 
-  new_input = input.to_i - 1
-  return new_input
-end
-
   def valid_move?(board, index)
   def position_taken?(board, index)
     if board[index] == " " || board[index] == "" || board[index] == nil
@@ -30,6 +26,7 @@ end
     else
       return true
     end
+  end
 
 
   def on_board?(number)
@@ -45,6 +42,17 @@ end
   else
     return false
   end
+end
+
+def input_to_index(input) 
+  new_input = input.to_i - 1
+  return new_input
+end
+
+  def turn(board)
+  counter = 0
+  while counter < 9
+  puts "Please enter 1-9:"
 counter += 1
 end
-end
+
